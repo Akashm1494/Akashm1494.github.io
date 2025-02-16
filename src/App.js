@@ -57,7 +57,6 @@ function App() {
         <SkillsA />
         <Resume />
         <Projects />
-        <GitHubStats />
         <Contact />
         <Footer />
       </div>
