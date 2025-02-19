@@ -1,6 +1,6 @@
 .content {
   /* border:1px solid red; */
-  max-width: 1380px;
+  max-width: 1366px;
   overflow-x: hidden;
   margin: 0 auto;
 }
@@ -115,6 +115,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #ccc;
 }
 
 .controls button:hover {

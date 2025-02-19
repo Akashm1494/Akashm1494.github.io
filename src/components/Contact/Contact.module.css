@@ -1,24 +1,20 @@
 .contact_section {
-  height: 100vh;
-  padding: 0px 60px;
+  height: auto;
+  padding: 64px 0;
 }
 
 .heading {
-  padding: 90px 0px 70px;
+  text-align: center;
+  padding-bottom: 32px;
 }
 
-.contact_section .title {
-  font-style: normal;
+.title {
   font-weight: 700;
   font-size: 36px;
-  line-height: 45px;
   color: var(--cinder);
 }
 
 .container {
-  /* display: flex;
-  align-items: center; */
-
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 80px;
@@ -26,42 +22,108 @@
   margin: auto;
 }
 
-.right {
+.contactForm {
+  max-width: 600px;
   margin: auto;
 }
 
-@media only screen and (max-width: 1024px) {
-  .contact_section {
-    height: 50vh;
+.formControl {
+  input,
+  textarea {
+    width: 100%;
+    padding: 16px 24px;
+    font-size: 14px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    background: var(--light-2);
+    border: none;
+    outline: none;
   }
 }
 
-@media only screen and (max-width: 968px) {
-  .contact_section {
-    height: auto;
-  }
+.submitBtn {
+  padding: 16px 24px;
+  background: var(--purple);
+  color: var(--white);
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
 
-  .heading {
-    padding: 50px 0px 40px;
-  }
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
 
+.contactInfoItem {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 56px;
+  height: 56px;
+  padding: 12px;
+  background: var(--purple-light-2);
+  border-radius: 16px;
+  margin-right: 24px;
+  font-size: 30px;
+  color: var(--purple);
+}
+
+.content {
+  text-align: left;
+  color: var(--cinder);
+}
+
+.infoTitle {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.infoBody {
+  font-size: 18px;
+  color: var(--cinder-light);
+}
+
+.formControl {
+  position: relative;
+}
+.formControl input, textarea {
+    width: 100%;
+    padding: 16px 24px;
+    font-size: 14px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    background: var(--light-2);
+    border: none;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.formControl:focus {
+  border: 2px solid var(--purple);
+  box-shadow: 0 0 10px rgba(128, 0, 128, 0.3);
+}
+
+.submitBtn {
+  padding: 16px 24px;
+  background: var(--purple);
+  color: var(--white);
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+
+@media (max-width: 968px) {
   .container {
     display: flex;
     flex-direction: column;
     gap: 50px;
-  }
-
-  .right {
-    margin: 0;
-  }
-}
-
-@media only screen and (max-width: 425px) {
-  .contact_section {
-    padding: 0px 30px;
-  }
-
-  .heading {
-    padding: 30px 0px;
   }
 }
