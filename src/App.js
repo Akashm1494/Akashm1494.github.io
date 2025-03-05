@@ -8,7 +8,7 @@ import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer/Footer";
 import { createContext } from "react";
 import SkillsA from "./components/Skills/Skills";
-import Education from "./components/Resume/Education";
+import Education from "./components/Education/Education";
 
 export const ThemeContext = createContext(null);
 
@@ -23,8 +23,8 @@ function App() {
 
   useEffect(() => {
     if (theme === "dark") {
-      body.style.background = "#282d3f";
-      body.style.color = "#dddddd";
+      body.style.background = "#020B0D";
+      body.style.color = "#FFFFFF";
     } else {
       body.style.background = "#ffffff";
       body.style.color = "#656d72";
@@ -38,8 +38,8 @@ function App() {
         <Home />
         <About />
         <SkillsA />
-        <Education />
         <Projects />
+        <Education />
         <Contact />
         <Footer />
       </div>

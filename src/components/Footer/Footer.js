@@ -16,14 +16,14 @@ function Footer() {
       <div>
         <a
           className={styles.socialIcon}
-          href="https://github.com/kali2498"
+          href="https://akashm1494.github.io/"
           target="_blank"
         >
           <FiGithub />
         </a>
         <a
           className={styles.socialIcon}
-          href="https://www.linkedin.com/in/akash-more-680180258/"
+          href="https://www.linkedin.com/in/code-with-akash/"
           target="_blank"
         >
           <FiLinkedin />

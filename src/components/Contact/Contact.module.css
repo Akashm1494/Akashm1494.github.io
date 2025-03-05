@@ -1,6 +1,8 @@
-.contact_section {
+ .contact_section {
   height: auto;
   padding: 64px 0;
+  background-color: var(--light-2);
+  overflow: hidden;
 }
 
 .heading {
@@ -9,9 +11,26 @@
 }
 
 .title {
+  font-style: normal;
   font-weight: 700;
   font-size: 36px;
+  line-height: 45px;
   color: var(--cinder);
+  position: relative;
+  display: inline-block;
+  text-transform: capitalize;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  border-radius: 24px;
+  height: 6px;
+  background: var(--primary-gradient);
 }
 
 .container {
@@ -22,35 +41,77 @@
   margin: auto;
 }
 
+/* ✅ Contact Form */
 .contactForm {
   max-width: 600px;
   margin: auto;
 }
 
-.formControl {
-  input,
-  textarea {
-    width: 100%;
-    padding: 16px 24px;
-    font-size: 14px;
-    border-radius: 8px;
-    margin-bottom: 16px;
-    background: var(--light-2);
-    border: none;
-    outline: none;
-  }
+.formControl input,
+.formControl textarea {
+  width: 100%;
+  padding: 16px 24px;
+  font-size: 14px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease-in-out;
 }
 
+/* ✅ Normal Mode (Light) - Black Border */
+#light .formControl input,
+#light .formControl textarea {
+  background: var(--secondary-bg);
+  border: 2px solid black;
+  color: black;
+}
+
+/* ✅ Dark Mode - No Border, White Background */
+#dark .formControl input,
+#dark .formControl textarea {
+  background: white;
+  border: none;
+  color: black;
+}
+
+/* ✅ Focus Effect */
+.formControl input:focus,
+.formControl textarea:focus,
+.focused {
+  border: 2px solid var(--primary-gradient);
+  box-shadow: 0 0 15px rgba(33, 145, 208, 0.3);
+  transform: translateY(-2px);
+}
+
+/* ✅ Submit Button */
 .submitBtn {
   padding: 16px 24px;
-  background: var(--purple);
-  color: var(--white);
+  background: var(--primary-gradient);
+  color: white;
   border-radius: 8px;
   border: none;
   cursor: pointer;
   width: 100%;
+  transition: all 0.3s ease-in-out;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+.submitBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.submitBtn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ Contact Info */
 .contactInfo {
   display: flex;
   flex-direction: column;
@@ -60,22 +121,36 @@
 .contactInfoItem {
   display: flex;
   align-items: center;
+  border-radius: 12px;
+  padding: 16px;
+  transition: all 0.3s ease;
+}
+
+.contactInfoItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .icon {
   width: 56px;
   height: 56px;
   padding: 12px;
-  background: var(--purple-light-2);
+  background: var(--primary-gradient);
   border-radius: 16px;
   margin-right: 24px;
   font-size: 30px;
-  color: var(--purple);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.contactInfoItem:hover .icon {
+  transform: rotate(5deg);
 }
 
 .content {
   text-align: left;
-  color: var(--cinder);
+  color: var(--text-color);
 }
 
 .infoTitle {
@@ -88,42 +163,101 @@
   color: var(--cinder-light);
 }
 
-.formControl {
-  position: relative;
-}
-.formControl input, textarea {
-    width: 100%;
-    padding: 16px 24px;
-    font-size: 14px;
-    border-radius: 8px;
-    margin-bottom: 16px;
-    background: var(--light-2);
-    border: none;
-    outline: none;
-    transition: all 0.3s ease-in-out;
+.successMessage {
+  color: #4BB543;
+  font-weight: 500;
+  margin-top: 16px;
+  text-align: center;
+  animation: fadeIn 0.5s ease;
 }
 
-.formControl:focus {
-  border: 2px solid var(--purple);
-  box-shadow: 0 0 10px rgba(128, 0, 128, 0.3);
+/* Simple animations that will work reliably */
+
+/* Title animation */
+.animateTitle {
+  animation: fadeInDown 0.8s ease-out forwards;
 }
 
-.submitBtn {
-  padding: 16px 24px;
-  background: var(--purple);
-  color: var(--white);
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  transition: all 0.3s ease-in-out;
+/* Left container animation */
+.animateLeft {
+  animation: slideFromLeft 0.8s ease-out forwards;
 }
 
+/* Right container animation */
+.animateRight {
+  animation: slideFromRight 0.8s ease-out forwards;
+}
 
+/* Individual items animations */
+.animateItem {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Animation keyframes */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 📱 Responsive */
 @media (max-width: 968px) {
   .container {
     display: flex;
     flex-direction: column;
     gap: 50px;
+  }
+  
+  .left, .right {
+    width: 90%;
+    margin: 0 auto;
   }
 }

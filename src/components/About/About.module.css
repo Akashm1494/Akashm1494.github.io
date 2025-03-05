@@ -18,6 +18,21 @@
   font-size: 36px;
   line-height: 45px;
   color: var(--cinder);
+  position: relative;
+  display: inline-block;
+  text-transform: capitalize;
+}
+
+.about_section .title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  border-radius: 24px;
+  height: 6px;
+  background: var(--primary-gradient);
 }
 
 .container {

@@ -5,7 +5,7 @@ import { HiOutlineMoon } from "react-icons/hi";
 import { CgSun } from "react-icons/cg";
 import { useState, useContext } from "react";
 import { ThemeContext } from "../../App";
-import fw19_0797_Akash_More_Resume from "./fw19_0797_Akash_More_Resume.pdf";
+import AkashMore_FullStackDeveloper_2025 from "./AkashMore_FullStackDeveloper_2025.pdf";
 
 function Navbar() {
   const [isMenuClicked, setIsMenuClicked] = useState(false);
@@ -51,11 +51,11 @@ function Navbar() {
               {darkTheme ? <CgSun /> : <HiOutlineMoon />}
             </div>
 
-            <a href={fw19_0797_Akash_More_Resume} target="_blank" download>
+            <a href={AkashMore_FullStackDeveloper_2025} target="_blank" download>
               <button
                 onClick={() =>
                   window.open(
-                    `https://drive.google.com/file/d/1nP4lNdvcTE1nprRiHRsqQ7MXWq8IZn2t/view?usp=sharing`
+                    `https://drive.google.com/file/d/1w0D_H6ZtV7p_Gt9aM4arIz5r2AYUUu7z/view`
                   )
                 }
                 className={styles.nav_resume_btn}
@@ -112,11 +112,11 @@ function Navbar() {
             >
               Contact
             </a>
-            <a href={fw19_0797_Akash_More_Resume} target="_blank" download>
+            <a href={AkashMore_FullStackDeveloper_2025.pdf} target="_blank" download>
               <button
                 onClick={() =>
                   window.open(
-                    `https://drive.google.com/file/d/1nP4lNdvcTE1nprRiHRsqQ7MXWq8IZn2t/view?usp=sharing`
+                    `https://drive.google.com/file/d/1w0D_H6ZtV7p_Gt9aM4arIz5r2AYUUu7z/view`
                   )
                 }
                 className={styles.nav_resume_btn}
