@@ -9,11 +9,13 @@ import Footer from "./components/Footer/Footer";
 import { createContext } from "react";
 import SkillsA from "./components/Skills/Skills";
 import Education from "./components/Education/Education";
+import SkeletonLoader from "./components/SkeletonLoader/SkeletonLoader";
 
 export const ThemeContext = createContext(null);
 
 function App() {
   const [theme, setTheme] = useState("light");
+  const [loading, setLoading] = useState(true);
 
   const body = document.getElementsByTagName("BODY")[0];
 
@@ -31,17 +33,33 @@ function App() {
     }
   }, [theme]);
 
+  useEffect(() => {
+    // Simulate loading delay of 3.5 seconds
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 4000);
+
+    // Clean up the timer
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <ThemeContext.Provider value={{ theme, changeTheme }}>
       <div className="App" id={theme}>
         <Navbar />
-        <Home />
-        <About />
-        <SkillsA />
-        <Projects />
-        <Education />
-        <Contact />
-        <Footer />
+        {loading ? (
+          <SkeletonLoader theme={theme} />
+        ) : (
+          <>
+            <Home />
+            <About />
+            <SkillsA />
+            <Projects />
+            <Education />
+            <Contact />
+            <Footer />
+          </>
+        )}
       </div>
     </ThemeContext.Provider>
   );
