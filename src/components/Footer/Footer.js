@@ -16,7 +16,7 @@ function Footer() {
       <div>
         <a
           className={styles.socialIcon}
-          href="https://akashm1494.github.io/"
+          href="https://github.com/Akashm1494"
           target="_blank"
         >
           <FiGithub />
