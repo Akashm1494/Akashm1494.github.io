@@ -34,7 +34,7 @@
 .circle_1 {
   width: 400px;
   height: 400px;
-  background: var(--primary-color, #6a11cb);
+  background: var(--primary-color, #2191d0);
   top: -100px;
   right: -100px;
   animation: float 15s ease-in-out infinite;
@@ -44,7 +44,7 @@
 .circle_2 {
   width: 300px;
   height: 300px;
-  background: var(--secondary-color, #2575fc);
+  background: var(--secondary-color,#00d0d2);
   bottom: -50px;
   left: -50px;
   animation: float 18s ease-in-out infinite reverse;
@@ -54,7 +54,7 @@
 .circle_3 {
   width: 200px;
   height: 200px;
-  background: linear-gradient(45deg, var(--primary-color, #6a11cb), var(--secondary-color, #2575fc));
+  background: linear-gradient(45deg, var(--primary-color, #2191d0), var(--secondary-color,#00d0d2));
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) translate(calc(var(--mouse-x, 0) * 40px), calc(var(--mouse-y, 0) * 40px));
@@ -74,7 +74,7 @@
   position: relative;
   border-radius: 50%;
   padding: 6px;
-  background: linear-gradient(45deg, var(--primary-color, #6a11cb), var(--secondary-color, #2575fc));
+  background: linear-gradient(45deg, var(--primary-color, #2191d0), var(--secondary-color,#00d0d2));
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   animation: fadeIn 1.2s ease-out, floatImage 6s ease-in-out infinite;
 }
@@ -116,7 +116,7 @@
   inset: -10px;
   border-radius: 50%;
   padding: 10px;
-  background: linear-gradient(45deg, var(--primary-color, #6a11cb), transparent, var(--secondary-color, #2575fc));
+  background: linear-gradient(45deg, var(--primary-color, #2191d0), transparent, var(--secondary-color,#00d0d2));
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -128,6 +128,7 @@
 .home_right {
   flex: 1;
   position: relative;
+  z-index: 19;
 }
 
 .content_wrapper {
@@ -153,7 +154,7 @@
 .greet_line {
   width: 25px;
   height: 2px;
-  background: var(--primary-color, #6a11cb);
+  background: var(--primary-color, #2191d0);
   margin-right: 15px;
   display: inline-block;
   animation: expandLine 1.5s ease-out;
@@ -165,7 +166,7 @@
   font-weight: 800;
   line-height: 1.1;
   margin: 10px 0 20px;
-  /* background: linear-gradient(45deg, var(--primary-color, #6a11cb), var(--secondary-color, #2575fc));
+  /* background: linear-gradient(45deg, var(--primary-color, #2191d0), var(--secondary-color,#00d0d2));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; */
   color: #000;
@@ -194,7 +195,7 @@
   left: 0;
   width: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--primary-color, #6a11cb), var(--secondary-color, #2575fc));
+  background: linear-gradient(90deg, var(--primary-color, #2191d0), var(--secondary-color,#00d0d2));
   border-radius: 2px;
   animation: expandWidth 1s ease-out 1.8s forwards;
 }
@@ -248,7 +249,7 @@
 
 .social_icons a:hover {
   transform: translateY(-5px);
-  color: var(--primary-color, #6a11cb);
+  color: var(--primary-color, #2191d0);
 }
 
 .icon_tooltip {
@@ -256,7 +257,7 @@
   top: -30px;
   left: 50%;
   transform: translateX(-50%);
-  background: linear-gradient(45deg, var(--primary-color, #6a11cb), var(--secondary-color, #2575fc));
+  background: linear-gradient(45deg, var(--primary-color, #2191d0), var(--secondary-color,#00d0d2));
   color: white;
   padding: 4px 10px;
   border-radius: 4px;
@@ -275,7 +276,7 @@
   transform: translateX(-50%);
   border-width: 5px;
   border-style: solid;
-  border-color: var(--primary-color, #6a11cb) transparent transparent;
+  border-color: var(--primary-color, #2191d0) transparent transparent;
 }
 
 .social_icons a:hover .icon_tooltip {
@@ -294,7 +295,7 @@
 .contact_btn {
   display: inline-block;
   padding: 12px 30px;
-  background: linear-gradient(45deg, var(--primary-color, #6a11cb), var(--secondary-color, #2575fc));
+  background: linear-gradient(45deg, var(--primary-color, #2191d0), var(--secondary-color,#00d0d2));
   color: white;
   border-radius: 30px;
   font-weight: 600;
@@ -313,7 +314,7 @@
   left: 0;
   width: 0;
   height: 100%;
-  background: linear-gradient(45deg, var(--secondary-color, #2575fc), var(--primary-color, #6a11cb));
+  background: linear-gradient(45deg, var(--secondary-color,#00d0d2), var(--primary-color, #2191d0));
   transition: all 0.5s ease;
   z-index: -1;
 }
@@ -343,6 +344,94 @@
   opacity: 0.1;
 }
 
+/* Form Skelaton */
+
+/* Add these skeleton styles to your existing CSS */
+
+.skeleton_section {
+  background: var(--bg-primary);
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton_pulse {
+  background: linear-gradient(90deg,
+    var(--bg-secondary) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    var(--bg-secondary) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Image skeleton matching your circular image */
+.image_skeleton {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-secondary);
+}
+
+/* Text skeletons matching your text layout */
+.skeleton_text {
+  border-radius: 4px;
+  margin-bottom: 20px;
+  height: 24px;
+  background: var(--bg-secondary);
+}
+
+/* Social icons skeleton matching your icons */
+.social_icons .skeleton_icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin: 0 15px;
+  background: var(--bg-secondary);
+  display: inline-block;
+}
+
+/* Button skeleton matching your Get In Touch button */
+.skeleton_button {
+  width: 150px;
+  height: 45px;
+  border-radius: 25px;
+  background: var(--bg-secondary);
+  margin-top: 30px;
+}
+
+/* Adding some spacing and layout adjustments */
+.content_wrapper {
+  padding: 20px;
+}
+
+/* Making skeleton responsive */
+@media (max-width: 768px) {
+  .image_skeleton {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .skeleton_text {
+    margin: 15px auto;
+  }
+  
+  .social_icons {
+    justify-content: center;
+  }
+  
+  .skeleton_button {
+    margin: 30px auto;
+  }
+}
 /* Responsive Design */
 @media (max-width: 992px) {
   .home_section {
