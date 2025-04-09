@@ -252,6 +252,24 @@
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
+
+.mobile_wrapper:hover {
+  transform: none !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03) !important;
+}
+
+.mobile_content {
+  transition: none !important;
+}
+
+.mobile_content:hover {
+  transform: none !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.02) !important;
+}
+
+.mobile_content:hover::before {
+  height: 0 !important;
+}
 /* Responsive Design */
 @media only screen and (max-width: 1200px) {
   .container {
@@ -287,7 +305,8 @@
   }
   
   .timeline_content {
-    padding: 20px;
+    padding: 18px;
+    text-align: left;
   }
   
   .timeline_title {
@@ -297,15 +316,32 @@
   .timeline_heading {
     font-size: 1.3rem;
   }
+
+  .timeline_wrapper:hover {
+    transform: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03);
+  }
+  
+  .timeline_content:hover {
+    transform: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.02);
+  }
+  
+  .timeline_content:hover::before {
+    height: 0;
+  }
+  .timeline_date{
+    margin-bottom: 0;
+  }
 }
 
 @media only screen and (max-width: 480px) {
   .resume_section {
-    padding: 60px 0;
+    padding: 30px 0;
   }
   
   .title {
-    font-size: 28px;
+    font-size: 36px;
   }
   
   .timeline_wrapper {

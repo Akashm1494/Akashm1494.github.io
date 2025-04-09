@@ -12,25 +12,14 @@ const About = () => {
           <div className={styles.left}>
             <h3>Get to Know me!</h3>
             <p className={styles.desc}>
-              I’m Akash More, a passionate Full Stack Developer with over a year
-              of experience in building dynamic and scalable web applications.
-              Skilled in ReactJS, Node.js, MongoDB, and cloud-based solutions, I
-              specialize in crafting seamless digital experiences that drive
-              business success. Currently, I work at Mayra Digital Technologies,
-              where I develop and optimize web and mobile applications, focusing
-              on performance, user experience, and efficiency. From creating
-              React Native mobile apps to designing responsive websites with
-              modern front-end technologies, I thrive on solving complex
-              problems and delivering impactful solutions. I have honed my
-              skills through Masai School's intensive Full Stack Development
-              Program, where I completed 1200+ hours of hands-on coding and
-              worked on real-world projects using the MERN stack.✨✨
+            I'm Akash More, a passionate Full Stack Developer with 1.7 years of hands-on experience in building dynamic web and mobile applications using the <b>MERN stack</b> (<b>MongoDB</b>, <b>Express.js</b>, <b>ReactJS</b>, <b>Node.js</b>), <b>React Native</b>, and <b>Next.js</b>.
+
+I specialize in creating high-performance, scalable, and responsive solutions—ranging from <b>CMS platforms</b> and <b>scanner apps</b> to <b>custom WordPress websites</b> and animated <b>frontend</b> interfaces. My experience includes <b>end-to-end development</b>, <b>UI/UX enhancement</b>, <b>API integration</b>, and <b>performance optimization</b>. Whether it's building from scratch or optimizing existing systems, I enjoy turning complex problems into elegant, efficient code.
+
+Currently working at <b>Mayra Digital Technologies</b>, I've delivered projects that improved performance by up to <b>40%</b> and significantly enhanced user experience across platforms.✨✨
             </p>
             <p className={styles.desc}>
-              I’m always eager to learn new technologies and take on challenges
-              that push my boundaries. Let's collaborate and build something
-              amazing together!
-            </p>
+            I'm always excited to collaborate on innovative projects that push the boundaries of <b>tech</b> and <b>design</b>.            </p>
           </div>
           <div className={styles.right}></div>
         </div>

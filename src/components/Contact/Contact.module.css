@@ -250,14 +250,23 @@
 
 /* 📱 Responsive */
 @media (max-width: 968px) {
+  .contact_section {
+    padding: 30px 0;
+  }
   .container {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 25px;
   }
   
   .left, .right {
     width: 90%;
     margin: 0 auto;
+  }
+
+  .contactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 }

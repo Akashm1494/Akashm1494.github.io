@@ -18,15 +18,15 @@ const tabs = [
 
 const skillsData = {
   frontend: [
-    { name: "HTML", icon: <AiFillHtml5 />, proficiency: 90 },
-    { name: "CSS", icon: <RiCss3Fill />, proficiency: 85 },
-    { name: "SCSS", icon: <SiBootstrap />, proficiency: 75 },
-    { name: "JavaScript", icon: <IoLogoJavascript />, proficiency: 85 },
-    { name: "ReactJS", icon: <FaReact />, proficiency: 80 },
-    { name: "Redux", icon: <SiRedux />, proficiency: 75 },
-    { name: "TypeScript", icon: <SiTypescript />, proficiency: 70 },
+    { name: "HTML", icon: <AiFillHtml5 />, proficiency: 100 },
+    { name: "CSS", icon: <RiCss3Fill />, proficiency: 100 },
+    { name: "SCSS", icon: <SiBootstrap />, proficiency: 90 },
+    { name: "JavaScript", icon: <IoLogoJavascript />, proficiency: 90 },
+    { name: "ReactJS", icon: <FaReact />, proficiency: 90 },
+    { name: "Redux", icon: <SiRedux />, proficiency: 90 },
+    { name: "TypeScript", icon: <SiTypescript />, proficiency: 80 },
     { name: "NextJS", icon: <TbBrandNextjs />, proficiency: 65 },
-    { name: "Bootstrap", icon: <SiBootstrap />, proficiency: 80 },
+    { name: "Bootstrap", icon: <SiBootstrap />, proficiency: 90 },
     { name: "jQuery", icon: <SiJquery />, proficiency: 75 },
   ],
   backend: [
@@ -38,9 +38,9 @@ const skillsData = {
     { name: "PHP", icon: <DiPhp />, proficiency: 60 },
   ],
   tools: [
-    { name: "Git", icon: <DiGit />, proficiency: 85 },
-    { name: "GitHub", icon: <AiFillGithub />, proficiency: 80 },
-    { name: "VS Code", icon: <DiVisualstudio />, proficiency: 90 },
+    { name: "Git", icon: <DiGit />, proficiency: 100 },
+    { name: "GitHub", icon: <AiFillGithub />, proficiency: 100 },
+    { name: "VS Code", icon: <DiVisualstudio />, proficiency: 100 },
     { name: "Postman", icon: <SiPostman />, proficiency: 85 },
     { name: "WordPress", icon: <SiWordpress />, proficiency: 70 },
   ],
