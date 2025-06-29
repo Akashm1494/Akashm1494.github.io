@@ -4,17 +4,18 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: 
+  background-image:
     radial-gradient(circle at 10% 10%, rgba(255, 255, 255, 0.03) 0%, transparent 70%),
     radial-gradient(circle at 90% 90%, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
   z-index: 0;
 }
+
 /* 
 .Education_section_background{
   border: 1px solid #000;
 } */
 
-.resume_section{
+.resume_section {
   padding: 64px 0;
 }
 
@@ -64,7 +65,7 @@
   padding: 30px;
   background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(10px);
-  box-shadow: 
+  box-shadow:
     0 10px 30px rgba(0, 0, 0, 0.05),
     0 1px 3px rgba(0, 0, 0, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -73,7 +74,7 @@
 
 .timeline_wrapper:hover {
   transform: translateY(-5px);
-  box-shadow: 
+  box-shadow:
     0 15px 40px rgba(0, 0, 0, 0.08),
     0 1px 3px rgba(0, 0, 0, 0.03);
 }
@@ -128,13 +129,11 @@
   bottom: 0;
   left: 0;
   width: 1px;
-  background: linear-gradient(
-    to bottom,
-    rgba(125, 125, 125, 0) 0%,
-    rgba(125, 125, 125, 0.5) 15%,
-    rgba(125, 125, 125, 0.5) 85%,
-    rgba(125, 125, 125, 0) 100%
-  );
+  background: linear-gradient(to bottom,
+      rgba(125, 125, 125, 0) 0%,
+      rgba(125, 125, 125, 0.5) 15%,
+      rgba(125, 125, 125, 0.5) 85%,
+      rgba(125, 125, 125, 0) 100%);
 }
 
 .timeline_item {
@@ -161,13 +160,12 @@
 
 /* Timeline Content */
 .timeline_content {
+  text-align: left;
   background: white;
   padding: 25px 30px;
   border-radius: 16px;
   width: 100%;
-  box-shadow: 
-    0 10px 30px rgba(0, 0, 0, 0.03),
-    0 1px 3px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.02);
   transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   border-left: 2px solid transparent;
   position: relative;
@@ -187,7 +185,7 @@
 
 .timeline_content:hover {
   transform: translateX(8px);
-  box-shadow: 
+  box-shadow:
     0 15px 35px rgba(0, 0, 0, 0.06),
     0 1px 5px rgba(0, 0, 0, 0.03);
 }
@@ -270,6 +268,7 @@
 .mobile_content:hover::before {
   height: 0 !important;
 }
+
 /* Responsive Design */
 @media only screen and (max-width: 1200px) {
   .container {
@@ -299,20 +298,20 @@
   .container {
     padding: 0 20px;
   }
-  
+
   .title {
     font-size: 32px;
   }
-  
+
   .timeline_content {
     padding: 18px;
     text-align: left;
   }
-  
+
   .timeline_title {
     font-size: 1.2rem;
   }
-  
+
   .timeline_heading {
     font-size: 1.3rem;
   }
@@ -321,16 +320,17 @@
     transform: none;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03);
   }
-  
+
   .timeline_content:hover {
     transform: none;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.02);
   }
-  
+
   .timeline_content:hover::before {
     height: 0;
   }
-  .timeline_date{
+
+  .timeline_date {
     margin-bottom: 0;
   }
 }
@@ -339,24 +339,24 @@
   .resume_section {
     padding: 30px 0;
   }
-  
+
   .title {
     font-size: 36px;
   }
-  
+
   .timeline_wrapper {
     padding: 20px;
   }
-  
+
   .timeline_heading {
     font-size: 1.2rem;
   }
-  
+
   .icon_wrapper {
     width: 40px;
     height: 40px;
   }
-  
+
   .timeline_icon {
     font-size: 1.5rem;
   }

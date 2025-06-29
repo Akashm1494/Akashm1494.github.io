@@ -110,15 +110,17 @@ function Navbar() {
       <nav className={styles.nav_container}>
         <div className={styles.desktopMenu}>
           <div className={styles.nav_left}>
-            <a href="#home">Akash.</a>
+            <a href="#home">
+              <img src="/logos/Akash-Logo.png" alt="Main-Logo" className={styles.logo} />
+            </a>
           </div>
           <div className={styles.nav}>
             <a href="#about" className={styles.nav_link}>
               About
             </a>
-            <a href="#Skills" className={styles.nav_link}>
+            {/* <a href="#Skills" className={styles.nav_link}>
               Skills
-            </a>
+            </a> */}
             <a href="#resume" className={styles.nav_link}>
               Education
             </a>
@@ -153,7 +155,9 @@ function Navbar() {
         <div className={styles.mobileMenu}>
           {/* Hamburger menu */}
           <div className={styles.nav_left}>
-            <a href="#home">Akash.</a>
+            <a href="#home">
+              <img src="/logos/Akash-Logo.png" alt="Main-Logo" className={styles.logo} />
+            </a>
           </div>
           <div
             className={`${styles.navMobile} ${isMenuClicked ? styles.active : ""
@@ -166,13 +170,13 @@ function Navbar() {
             >
               About
             </a>
-            <a
+            {/* <a
               href="#Skills"
               onClick={toggleMobileMenu}
               className={styles.nav_link}
             >
               Skills
-            </a>
+            </a> */}
             <a
               href="#resume"
               onClick={toggleMobileMenu}

@@ -37,13 +37,34 @@
 /* ✅ Logo */
 .nav_left {
   padding-left: 50px;
+  display: flex;
+  align-items: center;
 }
 
 .nav_left>a {
+  /* font-weight: bold;
+  font-size: 25px;
+  color: var(--text-color); */
   font-weight: bold;
   font-size: 25px;
   color: var(--text-color);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
 }
+
+.logo {
+  height: 80px;
+  width: auto;
+  max-width: 120px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
 
 /* ✅ Navigation Links */
 .nav {
@@ -112,6 +133,19 @@
 
 /* ✅ Mobile Responsive */
 @media screen and (max-width: 1024px) {
+  .nav_left {
+    padding-left: 10px;
+  }
+
+  .nav_left>a {
+    font-size: 23px;
+  }
+
+  .logo {
+    height: 35px;
+    max-width: 100px;
+  }
+
   .nav_container {
     height: 60px;
     padding: 0 10px;
@@ -249,6 +283,15 @@
 
 /* Mobile Menu Skeleton Styles */
 @media (max-width: 768px) {
+  .logo {
+    height: 45px;
+    max-width: 80px;
+  }
+
+  .nav_left {
+    padding-left: 5px;
+  }
+
   .nav_resume_skeleton {
     display: none;
   }

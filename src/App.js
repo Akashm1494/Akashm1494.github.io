@@ -46,15 +46,15 @@ function App() {
     <ThemeContext.Provider value={{ theme, changeTheme }}>
       <div className="App" id={theme}>
         <Navbar />
-          <>
-            <Home />
-            <About />
-            <SkillsA />
-            <Projects />
-            <Education />
-            <Contact />
-            <Footer />
-          </>
+        <>
+          <Home />
+          <About />
+          {/* <SkillsA /> */}
+          <Projects />
+          <Education />
+          <Contact />
+          <Footer />
+        </>
       </div>
     </ThemeContext.Provider>
   );

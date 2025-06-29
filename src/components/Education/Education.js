@@ -10,39 +10,39 @@ const Education = () => {
   const educationData = [
     {
       title: "Masai School - Full-stack Web Development Program (Full Time)",
-      date: "March 2022 -  2023",
+      date: "April 2022 - April 2023",
       description: [
-        "Spent 1300+ hours mastering algorithms, data structures, and full-stack development.",
-        "Built projects using HTML, JavaScript, React, and Redux.",
-        "Developed skills in remote pair-programming, GitHub workflows, and daily standups."
+        "Completed intensive 1200+ hours of hands-on coding with weekly code reviews and performance evaluations.",
+        "Built full-stack applications using HTML5, CSS3, JavaScript (ES6+), React.js, Next.js, Node.js, Express.js, and MongoDB.",
+        "Collaborated in monthly Agile-based team projects with real-world development cycles including stand-ups, sprints, and version control."
       ],
     },
     {
-      title: "Yashwantrao Chavan Maharashtra Open University",
+      title: "Yashwantrao Chavan Maharashtra Open University (YCMOU), Pune",
       date: "2018-2021",
-      description: ["Bachelor of Arts"],
+      description: ["Bachelor of Arts (B.A.)"],
     },
   ];
 
   const workData = [
     {
-      title: "Mayra Digital Technologies",
-      date: "Sep 2023 - June 2025",
+      title: "MySathi Tech Pvt. Ltd.", // Put current job first
+      date: "June 2025 - Present",
       description: [
-        "Developed and deployed a mobile app using React Native.",
-        "Built and optimized a scanner app for document management.",
-        "Designed and developed 4 frontend websites with animations & responsive layouts.",
-        "Customized and launched a WordPress website.",
+        "Developing scalable web and mobile applications using React.js, Next.js, and React Native.",
+        "Building and integrating robust REST APIs using Node.js, Express.js, and TypeScript.",
+        "Managing MongoDB database architecture for optimized data storage and retrieval.",
+        "Leading full-stack project deployments with seamless UI to backend integration."
       ],
     },
     {
-      title: "MySathi Tech Pvt. Ltd.",
-      date: "June 2025 - Present",
+      title: "Mayra Digital Technologies",
+      date: "Sep 2023 - June 2025",
       description: [
-        "Developed web and mobile apps using React.js and React Native.",
-        "Built and integrated REST APIs using Node.js and Express.",
-        "Managed MongoDB database for data storage and retrieval.",
-        "Deployed full-stack projects and handled UI to backend integration."
+        "Developed and deployed responsive UI components using ReactJS, improving load speed by 30%.",
+        "Built cross-platform mobile apps using React Native and NativeBase for iOS and Android platforms.",
+        "Created a document scanner app using React Native and Node.js, boosting processing speed by 40%.",
+        "Customized WordPress websites from Figma designs using Bootstrap, jQuery, GSAP, and PHP."
       ],
     },
   ];
