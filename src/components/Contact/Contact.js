@@ -5,6 +5,7 @@ import styles from "./Contact.module.css";
 
 const Result = () => <p className={styles.successMessage}>Your message has been sent successfully!</p>;
 
+s
 function Contact() {
   const [result, setResult] = useState(false);
   const [focused, setFocused] = useState(null);
