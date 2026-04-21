@@ -5,7 +5,6 @@ import styles from "./Contact.module.css";
 
 const Result = () => <p className={styles.successMessage}>Your message has been sent successfully!</p>;
 
-s
 function Contact() {
   const [result, setResult] = useState(false);
   const [focused, setFocused] = useState(null);
@@ -50,7 +49,7 @@ function Contact() {
                   required
                 />
               </div>
-              
+
               <div className={`${styles.formControl} ${styles.animateItem}`} style={{ animationDelay: "0.2s" }}>
                 <input
                   name="email_id"
@@ -62,11 +61,11 @@ function Contact() {
                   required
                 />
               </div>
-              
+
               <div className={`${styles.formControl} ${styles.animateItem}`} style={{ animationDelay: "0.3s" }}>
-                <textarea 
-                  name="message" 
-                  rows="8" 
+                <textarea
+                  name="message"
+                  rows="8"
                   placeholder="Message"
                   onFocus={() => setFocused("message")}
                   onBlur={() => setFocused(null)}
@@ -82,7 +81,7 @@ function Contact() {
                   value="Send Message"
                 />
               </div>
-              
+
               <div className={styles.resultContainer}>
                 {result && <Result />}
               </div>
@@ -99,7 +98,7 @@ function Contact() {
                 <p className={styles.infoBody}>Pune, India</p>
               </div>
             </div>
-            
+
             <div className={`${styles.contactInfoItem} ${styles.animateItem}`} style={{ animationDelay: "0.4s" }}>
               <div className={styles.icon}><CiMail /></div>
               <div className={styles.content}>
@@ -107,7 +106,7 @@ function Contact() {
                 <p className={styles.infoBody}>more.akash0797@gmail.com</p>
               </div>
             </div>
-            
+
             <div className={`${styles.contactInfoItem} ${styles.animateItem}`} style={{ animationDelay: "0.5s" }}>
               <div className={styles.icon}><CiPhone /></div>
               <div className={styles.content}>

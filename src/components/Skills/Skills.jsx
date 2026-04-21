@@ -4,8 +4,7 @@ import { AiFillHtml5, AiFillGithub } from "react-icons/ai";
 import { RiCss3Fill } from "react-icons/ri";
 import { IoLogoJavascript, IoLogoNodejs } from "react-icons/io";
 import { FaReact } from "react-icons/fa";
-import { SiRedux, SiTypescript, SiExpress, SiMongodb, SiMysql, SiBootstrap, SiWordpress, SiJquery, SiGithubactions,
-} from "react-icons/si";
+import { SiRedux, SiTypescript, SiExpress, SiMongodb, SiMysql, SiBootstrap, SiWordpress, SiJquery } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 import { DiGit, DiVisualstudio, DiPhp } from "react-icons/di";
 import { SiPostman } from "react-icons/si";
@@ -61,15 +60,17 @@ const SkillsA = () => {
       { threshold: 0.2 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const currentSection = sectionRef.current;
+
+    if (currentSection) {
+      observer.observe(currentSection);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentSection) {
+        observer.unobserve(currentSection);
       }
-    }
+    };
   }, []);
 
   // Auto-change tabs every 10 seconds
@@ -91,7 +92,7 @@ const SkillsA = () => {
         <div className="bg-circle circle-1"></div>
         <div className="bg-circle circle-2"></div>
       </div>
-      
+
       <div className={`section-content ${isVisible ? 'visible' : ''}`}>
         <h2 className="section-title">My Skills</h2>
 
@@ -111,8 +112,8 @@ const SkillsA = () => {
 
         <div className="skills-container">
           {skillsData[activeTab].map((skill, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="skill-card"
               style={{ animationDelay: `${0.1 + index * 0.05}s` }}
               onMouseEnter={() => setHoveredSkill(skill.name)}
@@ -121,7 +122,7 @@ const SkillsA = () => {
               <div className="skill-info">
                 <div className="Skill-icon-Name">{skill.icon}</div>
               </div>
-              
+
               {/* Tooltip with additional info */}
               <div className={`skill-tooltip ${hoveredSkill === skill.name ? 'visible' : ''}`}>
                 <p className="tooltip-title">{skill.name}</p>
@@ -137,7 +138,7 @@ const SkillsA = () => {
           ))}
         </div>
       </div>
-      
+
       <svg width="0" height="0">
         <defs>
           <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">

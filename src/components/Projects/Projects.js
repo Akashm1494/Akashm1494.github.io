@@ -1,14 +1,12 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { BsGithub, BsLink } from "react-icons/bs";
 import styles from "./Projects.module.css";
-import { ThemeContext } from "../../App"; 
 
 const Projects = () => {
-  const { theme } = useContext(ThemeContext); 
   const [sliderRef, setSliderRef] = useState(null);
   const [isVisible, setIsVisible] = useState(false);
 

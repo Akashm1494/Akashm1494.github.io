@@ -18,6 +18,7 @@ function Footer() {
           className={styles.socialIcon}
           href="https://github.com/Akashm1494"
           target="_blank"
+          rel="noreferrer"
         >
           <FiGithub />
         </a>
@@ -25,6 +26,7 @@ function Footer() {
           className={styles.socialIcon}
           href="https://www.linkedin.com/in/code-with-akash/"
           target="_blank"
+          rel="noreferrer"
         >
           <FiLinkedin />
         </a>
@@ -32,6 +34,7 @@ function Footer() {
           className={styles.socialIcon}
           href="https://www.instagram.com/akash_more_2410/"
           target="_blank"
+          rel="noreferrer"
         >
           <FiInstagram />
         </a>

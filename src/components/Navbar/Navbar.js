@@ -137,7 +137,7 @@ function Navbar() {
               {darkTheme ? <CgSun /> : <HiOutlineMoon />}
             </div>
 
-            <a href={AkashMore_FullStackDeveloper_2025} target="_blank" download>
+            <a href={AkashMore_FullStackDeveloper_2025} target="_blank" rel="noreferrer" download>
               <button
                 onClick={() =>
                   window.open(
@@ -199,7 +199,7 @@ function Navbar() {
             >
               Contact
             </a>
-            <a href={AkashMore_FullStackDeveloper_2025.pdf} target="_blank" download>
+            <a href={AkashMore_FullStackDeveloper_2025} target="_blank" rel="noreferrer" download>
               <button
                 onClick={() =>
                   window.open(

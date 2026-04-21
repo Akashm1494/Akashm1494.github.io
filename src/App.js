@@ -7,22 +7,20 @@ import Contact from "./components/Contact/Contact";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer/Footer";
 import { createContext } from "react";
-import SkillsA from "./components/Skills/Skills";
+// import SkillsA from "./components/Skills/Skills";
 import Education from "./components/Education/Education";
 
 export const ThemeContext = createContext(null);
 
 function App() {
   const [theme, setTheme] = useState("light");
-  const [loading, setLoading] = useState(true);
-
-  const body = document.getElementsByTagName("BODY")[0];
 
   const changeTheme = () => {
     setTheme((curr) => (curr === "light" ? "dark" : "light"));
   };
 
   useEffect(() => {
+    const body = document.getElementsByTagName("BODY")[0];
     if (theme === "dark") {
       body.style.background = "#020B0D";
       body.style.color = "#FFFFFF";
@@ -31,16 +29,6 @@ function App() {
       body.style.color = "#656d72";
     }
   }, [theme]);
-
-  // useEffect(() => {
-  //   // Simulate loading delay of 3.5 seconds
-  //   const timer = setTimeout(() => {
-  //     setLoading(false);
-  //   }, 4000);
-
-  //   // Clean up the timer
-  //   return () => clearTimeout(timer);
-  // }, []);
 
   return (
     <ThemeContext.Provider value={{ theme, changeTheme }}>
