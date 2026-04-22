@@ -24,18 +24,19 @@ const experiences = [
     },
 ];
 
-const education = [
-    {
-        title: "Masai School — Full Stack Web Development",
-        period: "April 2022 – April 2023",
-        detail: "1200+ hours of intensive hands-on coding with weekly reviews, Agile sprints & real-world projects.",
-    },
-    {
-        title: "YCMOU, Pune — Bachelor of Arts (B.A.)",
-        period: "2018 – 2021",
-        detail: "",
-    },
-];
+// Education data - commented out as requested
+// const education = [
+//     {
+//         title: "Masai School — Full Stack Web Development",
+//         period: "April 2022 – April 2023",
+//         detail: "1200+ hours of intensive hands-on coding with weekly reviews, Agile sprints & real-world projects.",
+//     },
+//     {
+//         title: "YCMOU, Pune — Bachelor of Arts (B.A.)",
+//         period: "2018 – 2021",
+//         detail: "",
+//     },
+// ];
 
 const ExperienceSection = () => {
     return (
@@ -96,8 +97,8 @@ const ExperienceSection = () => {
                     </div>
                 </div>
 
-                {/* Education */}
-                <motion.div
+                {/* Education - Hidden as requested */}
+                {/* <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-80px" }}
@@ -116,7 +117,7 @@ const ExperienceSection = () => {
                             </div>
                         ))}
                     </div>
-                </motion.div>
+                </motion.div> */}
             </div>
         </section>
     );

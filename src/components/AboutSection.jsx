@@ -1,10 +1,15 @@
 import { motion } from "framer-motion";
-import { Code2, Smartphone, Rocket } from "lucide-react";
+import { Code2, Smartphone, Apple, Smartphone as Android } from "lucide-react";
 
 const highlights = [
     { icon: Code2, value: "3+", label: "Years Experience" },
     { icon: Smartphone, value: "10+", label: "Projects Delivered" },
-    { icon: Rocket, value: "2", label: "Apps on App Stores" },
+    {
+        icon: Android,
+        value: "5",
+        label: "Apps on App Store & Play Store",
+        secondaryIcon: Apple
+    },
 ];
 
 const AboutSection = () => {
@@ -52,8 +57,13 @@ const AboutSection = () => {
                     >
                         {highlights.map((item, i) => (
                             <div key={i} className="glass-card p-5 flex items-center gap-4">
-                                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0 relative">
                                     <item.icon size={22} />
+                                    {item.secondaryIcon && (
+                                        <div className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-background border border-border flex items-center justify-center">
+                                            <item.secondaryIcon size={12} />
+                                        </div>
+                                    )}
                                 </div>
                                 <div>
                                     <p className="text-2xl font-bold text-foreground">{item.value}</p>
