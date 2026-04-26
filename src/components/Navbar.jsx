@@ -14,27 +14,47 @@ const navLinks = [
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const [mobileOpen, setMobileOpen] = useState(false);
+    const [savedScrollY, setSavedScrollY] = useState(0);
     const { theme, setTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
         setMounted(true);
-        const onScroll = () => setScrolled(window.scrollY > 50);
+        const onScroll = () => {
+            const currentScroll = window.scrollY;
+            setSavedScrollY(currentScroll);
+            setScrolled(currentScroll > 50);
+        };
+
         window.addEventListener("scroll", onScroll);
+        onScroll();
+
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
 
     useEffect(() => {
         // Prevent body scroll when mobile menu is open
         if (mobileOpen) {
+            document.body.style.position = 'fixed';
+            document.body.style.top = `-${savedScrollY}px`;
+            document.body.style.width = '100%';
             document.body.style.overflow = 'hidden';
+            // Keep scrolled state based on saved position
+            setScrolled(savedScrollY > 50);
         } else {
-            document.body.style.overflow = 'unset';
+            // Restore scroll position
+            const scrollY = document.body.style.top;
+            document.body.style.position = '';
+            document.body.style.top = '';
+            document.body.style.width = '';
+            document.body.style.overflow = '';
+            if (scrollY) {
+                const scrollPos = parseInt(scrollY || '0') * -1;
+                window.scrollTo(0, scrollPos);
+                setScrolled(scrollPos > 50);
+            }
         }
-        return () => {
-            document.body.style.overflow = 'unset';
-        };
-    }, [mobileOpen]);
+    }, [mobileOpen, savedScrollY]);
 
     const toggleTheme = () => {
         setTheme(theme === "dark" ? "light" : "dark");
@@ -47,11 +67,11 @@ const Navbar = () => {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
                 ? "bg-background/80 backdrop-blur-xl border-b border-border"
-                : "bg-transparent"
+                : "bg-transparent border-b border-transparent"
                 }`}
         >
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-14 sm:h-16">
-                <a href="#" className="text-lg sm:text-xl font-bold text-gradient font-mono">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-14 sm:h-16 bg-transparent">
+                <a href="#" className="text-lg sm:text-xl font-bold text-gradient font-mono bg-transparent">
                     {"<AM />"}
                 </a>
 
@@ -106,37 +126,40 @@ const Navbar = () => {
             </div>
 
             {/* Mobile menu - Full Screen with Scroll */}
-            <AnimatePresence>
+            <AnimatePresence mode="wait">
                 {mobileOpen && (
                     <motion.div
+                        key="mobile-menu"
                         initial={{ opacity: 0, x: "100%" }}
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: "100%" }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="md:hidden fixed inset-0 top-14 bg-background z-40 overflow-y-auto"
+                        className="md:hidden fixed inset-0 top-14 sm:top-16 bg-background z-40"
                     >
-                        <ul className="flex flex-col gap-6 p-8 min-h-full">
-                            {navLinks.map((link) => (
-                                <li key={link.href}>
+                        <div className="h-full overflow-y-auto">
+                            <ul className="flex flex-col gap-6 p-8 min-h-full">
+                                {navLinks.map((link) => (
+                                    <li key={link.href}>
+                                        <a
+                                            href={link.href}
+                                            onClick={() => setMobileOpen(false)}
+                                            className="text-xl font-medium text-foreground hover:text-primary transition-colors block"
+                                        >
+                                            {link.label}
+                                        </a>
+                                    </li>
+                                ))}
+                                <li className="mt-4">
                                     <a
-                                        href={link.href}
+                                        href="#contact"
                                         onClick={() => setMobileOpen(false)}
-                                        className="text-xl font-medium text-foreground hover:text-primary transition-colors block"
+                                        className="block text-center text-base font-semibold px-6 py-3 rounded-lg bg-primary text-primary-foreground"
                                     >
-                                        {link.label}
+                                        Get In Touch
                                     </a>
                                 </li>
-                            ))}
-                            <li className="mt-4">
-                                <a
-                                    href="#contact"
-                                    onClick={() => setMobileOpen(false)}
-                                    className="block text-center text-base font-semibold px-6 py-3 rounded-lg bg-primary text-primary-foreground"
-                                >
-                                    Get In Touch
-                                </a>
-                            </li>
-                        </ul>
+                            </ul>
+                        </div>
                     </motion.div>
                 )}
             </AnimatePresence>

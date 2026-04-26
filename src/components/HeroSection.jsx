@@ -68,8 +68,19 @@ const HeroSection = () => {
                             View My Work
                         </a>
                         <a
-                            href="/resume.docx"
-                            download="Akash_More_Resume.docx"
+                            href="/AkashMore_Resume_May_2026.pdf"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                // Open in new tab
+                                window.open('/AkashMore_Resume_May_2026.pdf', '_blank');
+                                // Trigger download
+                                const link = document.createElement('a');
+                                link.href = '/AkashMore_Resume_May_2026.pdf';
+                                link.download = 'AkashMore_Resume_May_2026.pdf';
+                                document.body.appendChild(link);
+                                link.click();
+                                document.body.removeChild(link);
+                            }}
                             className="px-6 sm:px-8 py-2.5 sm:py-3.5 text-sm sm:text-base rounded-xl border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300 flex items-center justify-center gap-2"
                         >
                             <FileDown size={16} className="sm:w-[18px] sm:h-[18px]" />
