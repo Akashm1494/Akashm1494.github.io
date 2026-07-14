@@ -68,15 +68,15 @@ const HeroSection = () => {
                             View My Work
                         </a>
                         <a
-                            href="/AkashMore_Resume_June_2026.pdf"
+                            href="/AkashMore_Resume_July_2026.pdf"
                             onClick={(e) => {
                                 e.preventDefault();
                                 // Open in new tab
-                                window.open('/AkashMore_Resume_June_2026.pdf', '_blank');
+                                window.open('/AkashMore_Resume_July_2026.pdf', '_blank');
                                 // Trigger download
                                 const link = document.createElement('a');
-                                link.href = '/AkashMore_Resume_June_2026.pdf';
-                                link.download = 'AkashMore_Resume_June_2026.pdf';
+                                link.href = '/AkashMore_Resume_July_2026.pdf';
+                                link.download = 'AkashMore_Resume_July_2026.pdf';
                                 document.body.appendChild(link);
                                 link.click();
                                 document.body.removeChild(link);

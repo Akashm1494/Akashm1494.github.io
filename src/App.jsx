@@ -1,15 +1,23 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { Toaster } from "@/components/ui/toaster";
+import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import LoaderScreen from "./components/LoaderScreen.jsx";
 
-const queryClient = new QueryClient();
+// Configure QueryClient with proper defaults
+const queryClient = new QueryClient({
+    defaultOptions: {
+        queries: {
+            retry: 2,
+            staleTime: 5 * 60 * 1000, // 5 minutes
+            refetchOnWindowFocus: false,
+        },
+    },
+});
 
 const App = () => {
     const [isLoading, setIsLoading] = useState(true);
@@ -22,10 +30,9 @@ const App = () => {
         <>
             {isLoading && <LoaderScreen onLoadComplete={handleLoadComplete} />}
             <QueryClientProvider client={queryClient}>
-                <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+                <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
                     <TooltipProvider>
                         <Toaster />
-                        <Sonner />
                         <BrowserRouter>
                             <Routes>
                                 <Route path="/" element={<Index />} />
