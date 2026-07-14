@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { useTheme } from "next-themes";
+import { useScrollLock } from "@/hooks/useScrollLock";
 
 const navLinks = [
     { label: "About", href: "#about" },
@@ -14,16 +15,16 @@ const navLinks = [
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const [mobileOpen, setMobileOpen] = useState(false);
-    const [savedScrollY, setSavedScrollY] = useState(0);
     const { theme, setTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
+
+    // Use scroll lock hook for mobile menu (industry best practice)
+    useScrollLock(mobileOpen);
 
     useEffect(() => {
         setMounted(true);
         const onScroll = () => {
-            const currentScroll = window.scrollY;
-            setSavedScrollY(currentScroll);
-            setScrolled(currentScroll > 50);
+            setScrolled(window.scrollY > 50);
         };
 
         window.addEventListener("scroll", onScroll);
@@ -31,30 +32,6 @@ const Navbar = () => {
 
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
-
-    useEffect(() => {
-        // Prevent body scroll when mobile menu is open
-        if (mobileOpen) {
-            document.body.style.position = 'fixed';
-            document.body.style.top = `-${savedScrollY}px`;
-            document.body.style.width = '100%';
-            document.body.style.overflow = 'hidden';
-            // Keep scrolled state based on saved position
-            setScrolled(savedScrollY > 50);
-        } else {
-            // Restore scroll position
-            const scrollY = document.body.style.top;
-            document.body.style.position = '';
-            document.body.style.top = '';
-            document.body.style.width = '';
-            document.body.style.overflow = '';
-            if (scrollY) {
-                const scrollPos = parseInt(scrollY || '0') * -1;
-                window.scrollTo(0, scrollPos);
-                setScrolled(scrollPos > 50);
-            }
-        }
-    }, [mobileOpen, savedScrollY]);
 
     const toggleTheme = () => {
         setTheme(theme === "dark" ? "light" : "dark");
@@ -65,7 +42,7 @@ const Navbar = () => {
             initial={{ y: -100 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
+            className={`absolute md:fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
                 ? "bg-background/80 backdrop-blur-xl border-b border-border"
                 : "bg-transparent border-b border-transparent"
                 }`}
