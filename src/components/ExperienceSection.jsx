@@ -2,14 +2,14 @@ import { motion } from "framer-motion";
 
 const experiences = [
     {
-        role: "Frontend-Focused Full Stack Developer",
-        company: "MySathi Tech Pvt. Ltd.",
-        period: "Jun 2025 – Present",
+        role: "Full Stack Developer (React Native + Backend)",
+        company: "MySathi Pvt Ltd",
+        period: "Jun 2025 – July 2026",
         points: [
-            "Published production Android & iOS apps to Google Play Store and App Store via React Native — managed full release pipeline",
-            "Architected 15+ reusable cross-platform UI components, reducing feature development time by ~30% per sprint",
-            "Integrated 10+ REST APIs with structured error handling; resolved 20+ performance bottlenecks improving Core Web Vitals",
-            "Built React.js + Tailwind CSS internal dashboards, streamlining team workflows and eliminating manual reporting",
+            "Led the development of the MySathi React Native application from scratch by building reusable UI components, application architecture, and core mobile features",
+            "Implemented real-time communication using Socket.io, Firebase services, FCM push notifications, app permissions, and managed Play Store & App Store releases",
+            "Developed responsive React.js dashboards with dynamic forms, reusable components, and performance optimizations using lazy loading and component memoization",
+            "Integrated Firebase services and REST APIs while implementing authentication, permissions, and application service modules for mobile and web applications",
         ],
     },
     {
@@ -17,9 +17,10 @@ const experiences = [
         company: "Mayra Digital Technologies",
         period: "Aug 2023 – Jun 2025",
         points: [
-            "Developed 10+ responsive React.js web apps for 15+ clients — delivered every sprint on time without a single missed deadline",
-            "Converted 8+ Figma designs into GSAP-animated production websites, cutting design-to-deployment time by ~25%",
-            "Built React Native screens and integrated REST APIs, enhancing usability and mobile performance across multiple client apps",
+            "Developed React.js applications along with WordPress and Laravel-based web projects, delivering 10+ client solutions using modern frontend technologies in Agile environments",
+            "Developed React Native features for M2M Ferries (100K+ downloads, 3.5★ rating), implementing booking workflows, Juspay payment integration, API integration, and production-ready mobile features",
+            "Converted Figma and Adobe XD designs into responsive React.js and React Native applications by building reusable UI components and maintaining pixel-perfect implementations",
+            "Developed responsive business websites for the EET platform by converting Figma designs into HTML, SCSS, JavaScript, and jQuery, with WordPress integration for content management",
         ],
     },
 ];

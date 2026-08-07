@@ -42,7 +42,7 @@ const HeroSection = () => {
                         transition={{ duration: 0.6, delay: 0.45 }}
                         className="text-base sm:text-lg md:text-xl text-muted-foreground mb-2 sm:mb-3"
                     >
-                        Frontend-Focused Full Stack Developer
+                        React Native Developer • Full Stack (React + Node.js + Firebase)
                     </motion.p>
 
                     <motion.p
@@ -51,8 +51,7 @@ const HeroSection = () => {
                         transition={{ duration: 0.6, delay: 0.55 }}
                         className="text-sm sm:text-base text-muted-foreground/70 max-w-lg mx-auto lg:mx-0 mb-6 sm:mb-8 px-2 sm:px-0"
                     >
-                        Crafting high-performance web &amp; mobile experiences with 3+ years of
-                        expertise in React, React Native &amp; modern JavaScript ecosystems.
+                        Building production-ready React Native mobile applications and React.js web applications with 3+ years of experience. Skilled in React Native, Firebase, REST APIs, Socket.io, and modern frontend development.
                     </motion.p>
 
                     <motion.div

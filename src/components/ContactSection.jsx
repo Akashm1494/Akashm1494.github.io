@@ -3,7 +3,7 @@ import { Mail, MapPin, Phone, Github, Linkedin, Globe } from "lucide-react";
 
 const ContactSection = () => {
     return (
-        <section id="contact" className="section-padding relative">
+        <section id="contact" className="section-padding !pb-8 relative">
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
             <div className="max-w-6xl mx-auto text-center">
                 <motion.div

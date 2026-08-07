@@ -2,20 +2,20 @@ import { motion } from "framer-motion";
 
 const skillCategories = [
     {
-        title: "Expert",
-        skills: ["React.js", "React Native", "JavaScript (ES6+)", "HTML5", "CSS3", "SCSS", "Tailwind CSS", "Bootstrap", "GSAP", "Redux", "Context API"],
+        title: "Mobile",
+        skills: ["React Native", "Expo", "FCM", "Firebase", "Socket.io", "React Navigation", "App Store", "Play Store"],
     },
     {
-        title: "Proficient",
-        skills: ["Node.js", "Express.js", "REST APIs", "MongoDB", "MySQL", "Expo", "NativeWind", "React Navigation", "App Store Deployment"],
+        title: "Frontend",
+        skills: ["React.js", "Next.js", "JavaScript (ES6+)", "TypeScript", "Redux", "Tailwind CSS", "SCSS", "GSAP", "HTML5"],
     },
     {
-        title: "Familiar",
-        skills: ["TypeScript", "CI/CD", "WordPress", "Machine Learning", "AI Integration"],
+        title: "Backend",
+        skills: ["Node.js", "Express.js", "REST APIs", "MongoDB", "MySQL", "Firebase Realtime", "Firestore"],
     },
     {
-        title: "Tools & AI",
-        skills: ["Git", "GitHub", "Figma-to-Code", "Postman", "Jest", "React Testing Library", "Agile/Scrum", "GitHub Copilot", "ChatGPT"],
+        title: "Tools",
+        skills: ["Git", "GitHub", "Postman", "Jest", "React Testing Library", "CI/CD", "Agile/Scrum", "Figma", "WordPress"],
     },
 ];
 

@@ -38,13 +38,13 @@ const AboutSection = () => {
                         className="md:col-span-3 space-y-5 text-muted-foreground leading-relaxed"
                     >
                         <p>
-                            I'm a <span className="text-foreground font-medium">Frontend-focused Full Stack Developer</span> with 3+ years of experience building high-performance React.js applications and cross-platform React Native mobile apps. Published production apps to <span className="text-foreground font-medium">Google Play Store and Apple App Store</span> end-to-end.
+                            I'm a <span className="text-foreground font-medium">Full Stack Developer</span> with 3+ years of experience building production-ready React Native mobile applications and React.js web applications. Skilled in <span className="text-foreground font-medium">React Native, React.js, Node.js, Firebase, REST APIs, Socket.io</span>, and modern frontend development.
                         </p>
                         <p>
-                            Currently at <span className="text-primary font-medium">MySathi Tech Pvt. Ltd.</span>, I build scalable products from the ground up — from intuitive UIs to robust backend integrations. Previously at Mayra Digital Technologies, I delivered <span className="text-foreground font-medium">15+ Agile client projects on time</span> without missing a single deadline.
+                            Contributed to production mobile and web applications, including <span className="text-primary font-medium">M2M Ferries (100K+ downloads)</span>, with a strong focus on performance, reusable components, and user experience. Led development of the MySathi React Native application from scratch, implementing real-time communication using Socket.io, Firebase services, and FCM push notifications.
                         </p>
                         <p>
-                            I thrive at the intersection of clean code and great design, and I'm driven by turning complex problems into elegant, user-first solutions.
+                            I thrive at the intersection of clean code and great design, delivering solutions that combine technical excellence with exceptional user experience.
                         </p>
                     </motion.div>
 
