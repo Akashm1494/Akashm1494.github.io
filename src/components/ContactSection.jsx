@@ -16,8 +16,8 @@ const ContactSection = () => {
                     <h2 className="text-3xl md:text-4xl font-bold mb-4">
                         Let's <span className="text-gradient">Connect</span>
                     </h2>
-                    <p className="text-muted-foreground max-w-md mx-auto mb-12">
-                        I'm always open to new opportunities, collaborations, or just a friendly chat about tech. Drop me a message!
+                    <p className="text-muted-foreground max-w-lg mx-auto mb-12">
+                        I'm always open to new opportunities, freelancing projects, collaborations, or just a friendly chat about tech. Drop me a message!
                     </p>
                 </motion.div>
 
@@ -26,21 +26,22 @@ const ContactSection = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-60px" }}
                     transition={{ duration: 0.6, delay: 0.15 }}
-                    className="grid sm:grid-cols-3 gap-4 mb-12"
+                    className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12"
                 >
                     {[
-                        { icon: Mail, label: "Email", value: "more.akash0797@gmail.com", href: "mailto:more.akash0797@gmail.com" },
+                        { icon: Mail, label: "Personal Email", value: "more.akash0797@gmail.com", href: "mailto:more.akash0797@gmail.com" },
+                        { icon: Mail, label: "Business Email", value: "moredigitalworks@gmail.com", href: "mailto:moredigitalworks@gmail.com" },
                         { icon: Phone, label: "Phone", value: "+91 8668498317", href: "tel:+918668498317" },
                         { icon: MapPin, label: "Location", value: "Pune, India", href: "#" },
-                    ].map((item) => (
+                    ].map((item, index) => (
                         <a
-                            key={item.label}
+                            key={`${item.label}-${index}`}
                             href={item.href}
                             className="glass-card-hover p-5 flex flex-col items-center gap-2"
                         >
                             <item.icon size={20} className="text-primary" />
                             <p className="text-xs text-muted-foreground">{item.label}</p>
-                            <p className="text-sm font-medium text-foreground">{item.value}</p>
+                            <p className="text-sm font-medium text-foreground break-all text-center">{item.value}</p>
                         </a>
                     ))}
                 </motion.div>
