@@ -15,9 +15,9 @@ const projects = [
         live: "https://www.mysathi.in/",
         appStore: "https://apps.apple.com/in/app/mysathi/id6754602462",
         playStore: "https://play.google.com/store/apps/details?id=com.mysathi.app",
-        // github: "#", // Commercial project - no public repository
         featured: true,
         type: "mobile",
+        category: "client", // Client/Commercial project
         images: [
             "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=340&fit=crop",
             "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=340&fit=crop",
@@ -32,9 +32,9 @@ const projects = [
         live: "https://www.m2mferries.com/",
         appStore: "https://apps.apple.com/in/app/m2m-ferries/id1588428935",
         playStore: "https://play.google.com/store/apps/details?id=m2m.eu",
-        // github: "#", // Commercial project - no public repository
         featured: true,
         type: "mobile",
+        category: "client", // Client/Commercial project
         stats: "100K+ Downloads • 3.5★ Rating",
         images: [
             "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=340&fit=crop",
@@ -48,9 +48,9 @@ const projects = [
             "Custom WordPress theme with portfolio showcase and client management system. Built with custom ACF fields, responsive design, and optimized performance.",
         stack: ["WordPress", "PHP", "Custom Theme", "ACF", "MySQL"],
         live: "https://www.mayradigital.com/",
-        // github: "#", // Commercial project - no public repository
         featured: true,
         type: "web",
+        category: "client", // Client/Commercial project
         images: [
             "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=340&fit=crop",
             "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=340&fit=crop",
@@ -63,9 +63,9 @@ const projects = [
             "Custom WordPress theme with WooCommerce integration achieving 95 website speed score. Built with custom post types, optimized images, and clean code architecture.",
         stack: ["WordPress", "WooCommerce", "PHP", "Custom Theme", "MySQL"],
         live: "https://etnowgbs.com/",
-        // github: "#", // Commercial project - no public repository
         featured: true,
         type: "web",
+        category: "client", // Client/Commercial project
         stats: "95 Speed Score",
         images: [
             "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=340&fit=crop",
@@ -79,9 +79,9 @@ const projects = [
             "Hydrogen power management system with advanced monitoring and reporting capabilities. WordPress platform for clean energy solutions.",
         stack: ["WordPress", "PHP", "MySQL", "Custom Theme"],
         live: "https://eethydrogenpower.com/",
-        // github: "#", // Commercial project - no public repository
         featured: false,
         type: "web",
+        category: "client", // Client/Commercial project
         images: [
             "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600&h=340&fit=crop",
             "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=340&fit=crop",
@@ -94,9 +94,9 @@ const projects = [
             "Multi-site WordPress platform with 90+ website speed score. Custom CMS with role-based access control and real-time updates.",
         stack: ["WordPress", "PHP", "MySQL", "Multi-Site"],
         live: "https://www.eetfuels.com",
-        // github: "#", // Commercial project - no public repository
         featured: false,
         type: "web",
+        category: "client", // Client/Commercial project
         stats: "90+ Speed Score",
         images: [
             "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=340&fit=crop",
@@ -110,9 +110,9 @@ const projects = [
             "Multi-site WordPress platform with 90+ website speed score. Enterprise-level biofuels management with analytics dashboard.",
         stack: ["WordPress", "PHP", "MySQL", "Multi-Site"],
         live: "https://eetbiofuels.com",
-        // github: "#", // Commercial project - no public repository
         featured: false,
         type: "web",
+        category: "client", // Client/Commercial project
         stats: "90+ Speed Score",
         images: [
             "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=340&fit=crop",

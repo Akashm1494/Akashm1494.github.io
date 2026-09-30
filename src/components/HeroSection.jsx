@@ -51,7 +51,7 @@ const HeroSection = () => {
                         transition={{ duration: 0.6, delay: 0.55 }}
                         className="text-sm sm:text-base text-muted-foreground/70 max-w-lg mx-auto lg:mx-0 mb-6 sm:mb-8 px-2 sm:px-0"
                     >
-                        Building production-ready React Native mobile applications and React.js web applications with 3+ years of experience. Skilled in React Native, Firebase, REST APIs, Socket.io, and modern frontend development.
+                        Building production-ready React Native mobile applications and React.js web applications with 3+ years of experience. Available for freelance projects and full-time opportunities.
                     </motion.p>
 
                     <motion.div

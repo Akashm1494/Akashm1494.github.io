@@ -14,10 +14,13 @@ const ContactSection = () => {
                 >
                     <p className="font-mono text-primary text-sm mb-2">// contact</p>
                     <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                        Let's <span className="text-gradient">Connect</span>
+                        Start a <span className="text-gradient">Project</span>
                     </h2>
-                    <p className="text-muted-foreground max-w-lg mx-auto mb-12">
-                        I'm always open to new opportunities, freelancing projects, collaborations, or just a friendly chat about tech. Drop me a message!
+                    <p className="text-muted-foreground max-w-lg mx-auto mb-4">
+                        Have an idea or need a custom web or mobile application? Let's discuss your project and bring it to life.
+                    </p>
+                    <p className="text-sm text-muted-foreground/80 max-w-lg mx-auto mb-12">
+                        Also open to full-time opportunities, collaborations, or just a friendly chat about tech.
                     </p>
                 </motion.div>
 
@@ -71,12 +74,20 @@ const ContactSection = () => {
                     ))}
                 </motion.div>
 
-                <a
-                    href="mailto:more.akash0797@gmail.com"
-                    className="inline-flex px-8 py-3.5 rounded-xl bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,210,190,0.25)]"
-                >
-                    Say Hello 👋
-                </a>
+                <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                    <a
+                        href="mailto:moredigitalworks@gmail.com"
+                        className="inline-flex px-8 py-3.5 rounded-xl bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,210,190,0.25)]"
+                    >
+                        Start a Project →
+                    </a>
+                    <a
+                        href="mailto:more.akash0797@gmail.com"
+                        className="inline-flex px-8 py-3.5 rounded-xl border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                    >
+                        Say Hello 👋
+                    </a>
+                </div>
             </div>
 
             {/* Footer */}

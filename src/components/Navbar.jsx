@@ -7,6 +7,7 @@ import { useScrollLock } from "@/hooks/useScrollLock";
 const navLinks = [
     { label: "About", href: "#about" },
     { label: "Skills", href: "#skills" },
+    { label: "Services", href: "#services" },
     { label: "Projects", href: "#projects" },
     { label: "Experience", href: "#experience" },
     { label: "Contact", href: "#contact" },
@@ -78,7 +79,7 @@ const Navbar = () => {
                             href="#contact"
                             className="text-sm font-semibold px-5 py-2 rounded-lg bg-primary text-primary-foreground hover:opacity-90 transition-opacity"
                         >
-                            Get In Touch
+                            Start a Project
                         </a>
                     </li>
                 </ul>
@@ -132,7 +133,7 @@ const Navbar = () => {
                                         onClick={() => setMobileOpen(false)}
                                         className="block text-center text-base font-semibold px-6 py-3 rounded-lg bg-primary text-primary-foreground"
                                     >
-                                        Get In Touch
+                                        Start a Project
                                     </a>
                                 </li>
                             </ul>

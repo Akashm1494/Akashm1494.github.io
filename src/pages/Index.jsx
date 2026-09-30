@@ -2,8 +2,10 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import SkillsSection from "@/components/SkillsSection";
+import FreelanceServices from "@/components/FreelanceServices";
 import ProjectsSection from "@/components/ProjectsSection";
 import ExperienceSection from "@/components/ExperienceSection";
+import HowIWork from "@/components/HowIWork";
 import ContactSection from "@/components/ContactSection";
 import CustomCursor from "@/components/CustomCursor";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -17,8 +19,10 @@ const Index = () => {
             <HeroSection />
             <AboutSection />
             <SkillsSection />
+            <FreelanceServices />
             <ProjectsSection />
             <ExperienceSection />
+            <HowIWork />
             <ContactSection />
         </div>
     );

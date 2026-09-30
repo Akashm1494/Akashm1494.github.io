@@ -16,13 +16,15 @@
 
 ## 👨‍💻 About Me
 
-Hi! I'm **Akash More**, a passionate **Full Stack Developer** with **2+ years** of hands-on experience in building dynamic web and mobile applications. I specialize in the **MERN Stack** and modern JavaScript frameworks.
+Hi! I'm **Akash More**, a passionate **Full Stack Developer** with **3+ years** of hands-on experience in building dynamic web and mobile applications. I specialize in **React Native, React.js, Node.js** and modern JavaScript frameworks.
 
 - 🔭 Currently working at **MySathi** as Full Stack Developer
-- 🌱 Expertise in **React.js, React Native, Node.js, Next.js**
+- 🌱 Expertise in **React.js, React Native, Node.js, Firebase, Socket.io**
 - 💼 Previously at **Mayara Digital Technologies**
+- 🚀 **Available for freelance projects and custom development work**
 - 📍 Based in **Pune, India**
-- 📫 Reach me: **more.akash0797@gmail.com**
+- 📧 **Business Email:** moredigitalworks@gmail.com
+- 📫 **Personal Email:** more.akash0797@gmail.com
 
 ---
 
@@ -36,6 +38,9 @@ Hi! I'm **Akash More**, a passionate **Full Stack Developer** with **2+ years** 
 - 🌙 **Dark Mode Ready** - Theme support with next-themes
 - 🚀 **SEO Optimized** - Meta tags, sitemap, and robots.txt
 - 📊 **Performance** - Optimized bundle size and lazy loading
+- 💼 **Freelance Ready** - Dedicated sections for services and client projects
+- 💼 **Freelance Ready** - Services section and client project showcase
+- 📧 **Business Contact** - Dedicated business email for freelance inquiries
 
 ---
 
@@ -120,17 +125,27 @@ npm run test:watch       # Run tests in watch mode
 ```
 ├── public/                 # Static assets
 │   ├── favicon.svg
-│   ├── resume.docx
+│   ├── AkashMore_Resume_July_2026.pdf
 │   ├── robots.txt
 │   └── sitemap.xml
 ├── src/
 │   ├── components/         # Reusable components
 │   │   ├── ui/            # Shadcn UI components
-│   │   └── ...
+│   │   ├── AboutSection.jsx
+│   │   ├── ContactSection.jsx
+│   │   ├── CustomCursor.jsx
+│   │   ├── ExperienceSection.jsx
+│   │   ├── FreelanceServices.jsx  # NEW: Freelance services
+│   │   ├── HeroSection.jsx
+│   │   ├── HowIWork.jsx          # NEW: Process section
+│   │   ├── LoaderScreen.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── ProjectsSection.jsx
+│   │   ├── ScrollToTop.jsx
+│   │   └── SkillsSection.jsx
 │   ├── pages/             # Page components
 │   ├── hooks/             # Custom React hooks
 │   ├── lib/               # Utility functions
-│   ├── test/              # Test files
 │   ├── App.jsx            # Main app component
 │   ├── main.jsx           # Entry point
 │   └── index.css          # Global styles
@@ -279,11 +294,13 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 **Akash More**
 
-- 📧 Email: more.akash0797@gmail.com
-- 💼 LinkedIn: [code-with-akash](https://www.linkedin.com/in/code-with-akash/)
-- 🐙 GitHub: [@Akashm1494](https://github.com/Akashm1494)
-- 📱 Phone: +91 7741919219
-- 📍 Location: Pune, India
+- 💼 **Business Inquiries:** moredigitalworks@gmail.com
+- 📧 **Personal Email:** more.akash0797@gmail.com
+- 💼 **LinkedIn:** [code-with-akash](https://www.linkedin.com/in/code-with-akash/)
+- 🐙 **GitHub:** [@Akashm1494](https://github.com/Akashm1494)
+- 📱 **Phone:** +91 8668498317
+- 📍 **Location:** Pune, India
+- 🌐 **Portfolio:** [akashm1494.github.io](https://akashm1494.github.io/)
 
 ---
 
@@ -316,7 +333,10 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 - [x] Implement responsive design
 - [x] Add animations
 - [x] Deploy to GitHub Pages
-- [ ] Add dark mode toggle
+- [x] Add dark mode toggle
+- [x] Add freelance services section
+- [x] Add process/workflow section
+- [x] Add dual email contacts (business + personal)
 - [ ] Add blog section
 - [ ] Add project case studies
 - [ ] Implement i18n (internationalization)
