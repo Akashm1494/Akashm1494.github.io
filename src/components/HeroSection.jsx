@@ -58,11 +58,11 @@ const HeroSection = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.65 }}
-                        className="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 mb-6 sm:mb-8 px-4 sm:px-0"
+                        className="flex flex-row flex-wrap justify-center lg:justify-start gap-2 sm:gap-3 mb-4 sm:mb-6 px-2 sm:px-0"
                     >
                         <a
                             href="#projects"
-                            className="px-6 sm:px-8 py-2.5 sm:py-3.5 text-sm sm:text-base rounded-xl bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-all duration-300 hover:shadow-[0_0_30px_hsl(175_80%_50%/0.25)] text-center"
+                            className="px-5 sm:px-8 py-2.5 sm:py-3.5 text-sm sm:text-base rounded-xl bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-all duration-300 hover:shadow-[0_0_30px_hsl(175_80%_50%/0.25)] text-center"
                         >
                             View My Work
                         </a>
@@ -80,7 +80,7 @@ const HeroSection = () => {
                                 link.click();
                                 document.body.removeChild(link);
                             }}
-                            className="px-6 sm:px-8 py-2.5 sm:py-3.5 text-sm sm:text-base rounded-xl border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300 flex items-center justify-center gap-2"
+                            className="px-5 sm:px-8 py-2.5 sm:py-3.5 text-sm sm:text-base rounded-xl border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300 flex items-center justify-center gap-2"
                         >
                             <FileDown size={16} className="sm:w-[18px] sm:h-[18px]" />
                             Resume
