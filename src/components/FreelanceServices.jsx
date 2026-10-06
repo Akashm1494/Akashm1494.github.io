@@ -89,7 +89,7 @@ const FreelanceServices = () => {
                         href="#contact"
                         className="inline-flex px-8 py-3.5 rounded-xl bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-all duration-300 hover:shadow-[0_0_30px_hsl(175_80%_50%/0.25)]"
                     >
-                        Start a Project →
+                        Start a Project
                     </a>
                 </motion.div>
             </div>

@@ -79,7 +79,7 @@ const ContactSection = () => {
                         href="mailto:moredigitalworks@gmail.com"
                         className="inline-flex px-8 py-3.5 rounded-xl bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,210,190,0.25)]"
                     >
-                        Start a Project →
+                        Start a Project
                     </a>
                     <a
                         href="mailto:more.akash0797@gmail.com"
